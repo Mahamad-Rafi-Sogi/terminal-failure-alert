@@ -1,0 +1,63 @@
+{
+  "name": "terminal-failure-alert",
+  "displayName": "Terminal Failure Alert",
+  "description": "Plays a sound alert when terminal commands fail - never miss an error again",
+  "version": "1.0.0",
+  "publisher": "RafiLabs",
+  "author": {
+    "name": "Rafi Labs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mahamad-Rafi-Sogi/terminal-failure-alert"
+  },
+  "license": "MIT",
+  "keywords": [
+    "terminal",
+    "sound",
+    "audio",
+    "notification",
+    "command",
+    "error",
+    "fail"
+  ],
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Terminal Failure Alert",
+      "properties": {
+        "terminalFailureAlert.customSoundPath": {
+          "type": "string",
+          "default": "",
+          "description": "Path to a custom sound file (.mp3 or .wav) to play when a terminal command fails. Leave empty to use the default sound."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/node": "18.x",
+    "@types/vscode": "^1.75.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vscode/vsce": "^3.7.1",
+    "eslint": "^8.28.0",
+    "typescript": "^5.0.0"
+  }
+}

@@ -1,0 +1,12 @@
+.vscode/**
+.vscode-test/**
+src/**
+.gitignore
+.editorconfig
+.eslintrc.js
+tsconfig.json
+yarn.lock
+node_modules/**
+*.vsix
+.github/**
+PACKAGING.md
