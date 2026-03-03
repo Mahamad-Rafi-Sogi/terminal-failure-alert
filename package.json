@@ -2,7 +2,7 @@
   "name": "terminal-failure-alert",
   "displayName": "Terminal Failure Alert",
   "description": "Plays a sound alert when terminal commands fail - never miss an error again",
-  "version": "1.0.3",
+  "version": "2.1.0",
   "publisher": "RafiLabs",
   "author": {
     "name": "Rafi Labs"
@@ -33,19 +33,25 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "commands": [
+      {
+        "command": "terminalFailureAlert.testSound",
+        "title": "Test Failure Sound",
+        "category": "Terminal Failure Alert"
+      }
+    ],
     "configuration": {
       "title": "Terminal Failure Alert",
       "properties": {
         "terminalFailureAlert.customSoundPath": {
           "type": "string",
           "default": "",
-          "description": "Path to a custom sound file (.mp3 or .wav) to play when a terminal command fails. Leave empty to use the default sound."
+          "description": "Path to a custom sound file (WAV format recommended) to play when a terminal command fails. Leave empty to use the default sound."
         }
       }
     }
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",

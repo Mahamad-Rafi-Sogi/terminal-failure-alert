@@ -2,6 +2,37 @@
 
 All notable changes to the "Terminal Failure Alert" extension will be documented in this file.
 
+## [2.1.0] - 2026-03-04
+
+### Fixed
+- **Working audio playback!** Switched to Windows System.Media.SoundPlayer with WAV format
+- Converted default sound from fha.mp3 to fha.wav for reliable playback
+- Fixed audio not playing issue - MP3 files don't work with PowerShell SoundPlayer
+- Uses `PlaySync()` to ensure sound completes before process exits
+
+### Added
+- Test command: "Terminal Failure Alert: Test Failure Sound" to manually test audio
+- Command palette integration for easy sound testing
+
+### Changed
+- Default sound format changed from MP3 to WAV for Windows compatibility
+- Removed sound-play npm dependency (wasn't producing audio on Windows)
+- Updated configuration description to recommend WAV format for custom sounds
+
+## [2.0.0] - 2026-03-03
+
+### Changed
+- **Major improvement:** Uses hidden background PowerShell process for instant audio playback
+- No visible windows or media player GUI
+- Sound plays immediately when command fails without blocking
+- Returns instantly to extension (~900ms vs 3000ms blocking)
+
+## [1.0.4] - 2026-03-03
+
+### Fixed
+- Reverted to 3 second delay to ensure complete sound playback
+- Users reported sound was being cut off with shorter delays
+
 ## [1.0.3] - 2026-03-03
 
 ### Fixed
