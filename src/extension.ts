@@ -48,7 +48,7 @@ function playFailSound(context: vscode.ExtensionContext): void {
   if (platform === 'win32') {
     // Windows: Use PowerShell with .NET MediaPlayer
     const escapedPath = soundPath.replace(/'/g, "''");
-    command = `powershell -WindowStyle Hidden -Command "Add-Type -AssemblyName presentationCore; $player = New-Object System.Windows.Media.MediaPlayer; $player.Open('${escapedPath}'); $player.Play(); Start-Sleep -Seconds 3"`;
+    command = `powershell -WindowStyle Hidden -Command "Add-Type -AssemblyName presentationCore; $player = New-Object System.Windows.Media.MediaPlayer; $player.Open('${escapedPath}'); $player.Play(); Start-Sleep -Milliseconds 500"`;
   } else if (platform === 'darwin') {
     // macOS: Use afplay
     command = `afplay ${quotedPath}`;

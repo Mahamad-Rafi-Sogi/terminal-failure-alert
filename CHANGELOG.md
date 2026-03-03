@@ -24,6 +24,12 @@ All notable changes to the "Terminal Failure Alert" extension will be documented
 - Non-intrusive background playback
 - Zero configuration required (works out of the box with default sound)
 
+## [1.0.2] - 2026-03-03
+
+### Improved
+- Reduced sound playback delay on Windows from 3 seconds to 500ms for faster response
+- Sound now plays almost immediately after command failure
+
 ## [Unreleased]
 
 No unreleased changes yet.

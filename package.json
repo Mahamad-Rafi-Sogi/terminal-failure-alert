@@ -2,7 +2,7 @@
   "name": "terminal-failure-alert",
   "displayName": "Terminal Failure Alert",
   "description": "Plays a sound alert when terminal commands fail - never miss an error again",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "publisher": "RafiLabs",
   "author": {
     "name": "Rafi Labs"
@@ -11,6 +11,7 @@
     "type": "git",
     "url": "https://github.com/Mahamad-Rafi-Sogi/terminal-failure-alert"
   },
+  "icon": "RafiLabs-logo-2.png",
   "license": "MIT",
   "keywords": [
     "terminal",
