@@ -2,7 +2,7 @@
   "name": "terminal-failure-alert",
   "displayName": "Terminal Failure Alert",
   "description": "Plays a sound alert when terminal commands fail - never miss an error again",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publisher": "RafiLabs",
   "author": {
     "name": "Rafi Labs"
@@ -45,7 +45,6 @@
     }
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",

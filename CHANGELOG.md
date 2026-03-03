@@ -2,6 +2,18 @@
 
 All notable changes to the "Terminal Failure Alert" extension will be documented in this file.
 
+## [1.0.3] - 2026-03-03
+
+### Fixed
+- Increased sound playback delay to 1500ms (1.5 seconds) to ensure sound plays reliably on Windows
+- Previous 500ms delay was too short, causing sound to be cut off
+
+## [1.0.2] - 2026-03-03
+
+### Improved
+- Reduced sound playback delay on Windows from 3 seconds to 500ms for faster response (later fixed in 1.0.3)
+- Updated extension logo
+
 ## [1.0.0] - 2026-03-02
 
 ### Added
